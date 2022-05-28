@@ -10,3 +10,4 @@ Do not run without dry run. Why would you set yourself to failure.
 7. Ask yourself what you are missing, go word by word. Slowly. Understand what is happening. Coding is a draining activity, make sure every session is worth it. 
 8. Write and paper and execute. Why would write code first ? Think interms of program variant, invariant and guard. Precondition and postcondition. Solve on paper and move to code.
 9. If there are tests. Check each test for every method. This gives you clarity.
+10. Try to filter by your type of return, when searching for method in docs. Only read what is needed.
