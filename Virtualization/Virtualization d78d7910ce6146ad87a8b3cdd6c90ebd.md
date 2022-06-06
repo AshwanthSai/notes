@@ -93,10 +93,40 @@ We have been using some form of virtualization. VMware, Ubuntu and Things.
     ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%205.png)
     
     - Application Level Virtualization - JVM.
+- Server / VM Migration, **Moving containers to different servers? - IMP**
+    
+    VMs, Snapshots can start running processes, from where they are paused. 
+    
+    So you can move them around for more efficent operation. They key problem while moving around is to copy memory instances. 
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%206.png)
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%207.png)
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%208.png)
+    
+    If VMs are customer facing, youll need to migrate Live. 
+    
+    Pre-Copy - Copy Memory Contents before running destination VM. Disruption is negligible.
+    
+    Dirty pages - memory pages that has been used and updated.
+    
+    Post Copy - Copy Memory Contents after starting destination VM. Stop Source VM, Copy CPU State and Page Table, 
+    
+    A page table is the data structure used by a virtual memory system in a computer operating system to store the mapping between virtual addresses and physical addresses.
+    
+- Pre Copy and Post Copy
+    
+    **Point of reference is the Destination VM.**
+    
+    Pre copy is generally prefered.
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%209.png)
+    
 - Server Migration. For migrating containers to different servers.
     
     Pre Copy - Copy Memory Contents Before Starting Destination VM.
     
     Post Copy - Copy Memory Contents on Demand.
     
-    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%206.png)
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%2010.png)
