@@ -6,11 +6,11 @@ We have been using some form of virtualization. VMware, Ubuntu and Things.
 
 - Glossary
     
-    Bare Metal - 
+    Bare Metal - VM On Servers
     
-    Host Operating Systems - 
+    Host Operating Systems - VM on OSes
     
-    Guest Operating Systems - 
+    Guest Operating Systems - Complete Operating Systems
     
 - Entire Picture
     
@@ -74,7 +74,7 @@ We have been using some form of virtualization. VMware, Ubuntu and Things.
     
     Virtual Box - Type 2 Virtualization. 
     
-- What is Noisy Neighbour affect?
+- What is Noisy Neighbour affect? What resources are most affected ?
     
     When multiple VMs use the same set of physical resources. There is never perfect isolation and resource contention problems.
     
@@ -130,3 +130,79 @@ We have been using some form of virtualization. VMware, Ubuntu and Things.
     Post Copy - Copy Memory Contents on Demand.
     
     ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%2010.png)
+    
+
+Important Questions
+
+---
+
+- **What are the different types of Virtualization Software ?**
+    
+    Type 1 - Xen, Microsoft Hyper V
+    
+    Type 2 - KVM (Kernal Base Virtual Machine), Virtual Box, VMware Workstation. 
+    
+- **What is Noisy Neighbour affect?**
+    
+    When multiple VMS running on a computer tries to access the same physical resources, perfect isolation is never achieved, resource contention problems arise. T
+    
+- **What resource is most affected by the noisy neighbour affect?**
+    
+    Mutliple Cores Share the same last level cache.
+    
+- **Server VM migration ?**
+    
+    Moving VMS around physical machines.  Leads to higher availability and load balancing.
+    
+- **Type 1 and Type 2 Virtualization ?**
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%2011.png)
+    
+- **How is server migrated, what are the types of server migration ?**
+    
+    Stop and Copy server migration, live migration - migration with zero down time. 
+    
+    Live Migration if of two types - Pre Copy and Post Copy.
+    
+    When memory is copied to destination vm before starting it is called Pre Copy. When memory is copied on demand after starting the vm it is called post copy.
+    
+- **Full Virtualization and Paravirtualization examples?**
+    
+    No modification, Kernal Virtual Machine and Slight Modification, Xen 
+    
+    Both of these support para virtualization and full virtualization.
+    
+- **Full Virtualization and Paravirtualization Draw?**
+    
+    You dont need to modify Host OS for Container, However you can run the containers only with the Same OS Kernel.
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%2012.png)
+    
+- **Post Copy and Pre Copy**
+    
+    ![Untitled](Virtualization%20d78d7910ce6146ad87a8b3cdd6c90ebd/Untitled%2013.png)
+    
+- **How does it virtualization help?**
+    
+    it enables dynamic resource allocation so
+    
+    **Resource Utilization.** 
+    
+    Since you can plug and play.
+    
+    **Higher availability.**
+    
+    **Productivity - Ease of testing, and deployement young m1 example.**
+    
+- **Advantages of Lightweight virtualization ?**
+    
+    Native Speeds.
+    
+    Share the same OS Kernel. 
+    
+    Better isolation of apps from each other.
+    
+    Works with all major linux and windows server
+    
+    Scalability: easy sign up new containers if needed
+    Run more apps on host machine
